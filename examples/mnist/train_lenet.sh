@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
-
-./build/tools/caffe train --solver=examples/mnist/lenet_solver.prototxt
+cd ${PBS_O_WORKDIR}
+./build/tools/caffe-d train --solver=examples/mnist/lenet_solver.prototxt -gpu 1,2
